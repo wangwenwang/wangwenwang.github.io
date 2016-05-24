@@ -64,6 +64,8 @@ $ pod spec lint LMProgressView.podspec
 
 ```
 
+![LM](/images/B54CF307-8C7A-45AA-B67D-12715FF8A1B1.png)
+
 验证通过后，创建tag，推送到github
 
 ```
@@ -88,6 +90,8 @@ $ pod trunk register 邮箱 '名字' --description='描述'
 $ pod trunk push LMProgressView.podspec
 
 ```
+
+![LM](/images/77BF3F65-EE0A-4E4F-9C73-8F5C6CA6B4AB.png)
 
 好了，最后放大招 pod search
 
