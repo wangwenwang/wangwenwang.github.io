@@ -120,8 +120,8 @@ font:
 social:
   #LinkLabel: Link
   GitHub: https://github.com/wangwenwang
-  Instagram: https://www.instagram.comm
-
+  Instagram: https://www.instagram.com
+# Weibo: http://weibo.com/u/3198397447
 
 # Social Links Icons
 # Icon Mapping:
@@ -181,7 +181,7 @@ links:
   小斧: http://52our.com
 
 #links_layout: block
-#links_layout: inline
+links_layout: inline
 #links:
   #Title: http://example.com/
 
