@@ -30,10 +30,6 @@ page:
   totally: Total
   tags: tags
 
-footer:
-  powered: "Powered by %s"
-  theme: Tema
-
 counter:
   tag_cloud:
     zero: Tidak ada tags

@@ -29,10 +29,6 @@ page:
   totally: Totalmente
   tags: tags
 
-footer:
-  powered: "Desenvolvido com amor com %s"
-  theme: Tema
-
 counter:
   tag_cloud:
     zero: Sem tags

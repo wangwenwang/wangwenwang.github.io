@@ -29,10 +29,6 @@ page:
   totally: 全ページ
   tags: タグ
 
-footer:
-  powered: "Powered by %s"
-  theme: Theme
-
 counter:
   tag_cloud:
     zero: タグなし

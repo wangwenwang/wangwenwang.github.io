@@ -31,11 +31,6 @@ page:
   totally: 共有
   tags: 標籤
 
-footer:
-  powered: "由 %s 強力驅動"
-  theme: 主題
-
-
 counter:
   tag_cloud:
     zero: 暫無標籤

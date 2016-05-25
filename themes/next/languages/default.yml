@@ -29,10 +29,6 @@ page:
   totally: Totally
   tags: tags
 
-footer:
-  powered: "Powered by %s"
-  theme: Theme
-
 counter:
   tag_cloud:
     zero: No tags
