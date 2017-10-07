@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -84,15 +84,21 @@
 
 
 
-<meta name="description" content="iOS Dev">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr Wang Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/05/index.html">
+<meta name="description" content="XIB和Storyboard提供操作View的属性还是很少，例如XIB中不支持view设置圆角（Key Path非可视化），而iOS8中为我们带来了新的可能。
+Objective-C IBDesignable/IBInspectable1234#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface IB_UIView : UIView @property (nonatomi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS自定义xib属性">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/iOS自定义xib属性/index.html">
 <meta property="og:site_name" content="Mr Wang Blog">
-<meta property="og:description" content="iOS Dev">
+<meta property="og:description" content="XIB和Storyboard提供操作View的属性还是很少，例如XIB中不支持view设置圆角（Key Path非可视化），而iOS8中为我们带来了新的可能。
+Objective-C IBDesignable/IBInspectable1234#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface IB_UIView : UIView @property (nonatomi">
+<meta property="og:image" content="http://yoursite.com/images/BBD09B73-E90B-4943-8E2F-AA6CCAD492C3.png">
+<meta property="og:updated_time" content="2017-04-12T10:02:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr Wang Blog">
-<meta name="twitter:description" content="iOS Dev">
+<meta name="twitter:title" content="iOS自定义xib属性">
+<meta name="twitter:description" content="XIB和Storyboard提供操作View的属性还是很少，例如XIB中不支持view设置圆角（Key Path非可视化），而iOS8中为我们带来了新的可能。
+Objective-C IBDesignable/IBInspectable1234#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface IB_UIView : UIView @property (nonatomi">
+<meta name="twitter:image" content="http://yoursite.com/images/BBD09B73-E90B-4943-8E2F-AA6CCAD492C3.png">
 
 
 
@@ -110,7 +116,7 @@
   };
 </script>
 
-  <title> 归档 | Mr Wang Blog </title>
+  <title> iOS自定义xib属性 | Mr Wang Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -141,7 +147,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -219,66 +225,133 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS自定义xib属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-12T16:43:59+08:00" content="2017-04-12">
+              2017-04-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/12/iOS自定义xib属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/12/iOS自定义xib属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>XIB和Storyboard提供操作View的属性还是很少，例如XIB中不支持view设置圆角（Key Path非可视化），而iOS8中为我们带来了新的可能。</p>
+<h3 id="Objective-C-IBDesignable-IBInspectable"><a href="#Objective-C-IBDesignable-IBInspectable" class="headerlink" title="Objective-C IBDesignable/IBInspectable"></a>Objective-C IBDesignable/IBInspectable</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">@interface IB_UIView : UIView </span><br><span class="line">@property (nonatomic, assign)IBInspectable CGFloat cornerRadius; </span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">IB_DESIGNABLE</span><br><span class="line">@implementation IB_UIView</span><br><span class="line"></span><br><span class="line">- (void)setCornerRadius:(CGFloat)cornerRadius &#123;</span><br><span class="line">    _cornerRadius = cornerRadius;</span><br><span class="line">    self.layer.cornerRadius  = _cornerRadius;</span><br><span class="line">    self.layer.masksToBounds = YES;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h3 id="Swift-IBDesignable-IBInspectable"><a href="#Swift-IBDesignable-IBInspectable" class="headerlink" title="Swift IBDesignable/IBInspectable"></a>Swift IBDesignable/IBInspectable</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">@IBDesignable class IB_UIView: UIView &#123;</span><br><span class="line"></span><br><span class="line">    @IBInspectable var cornerRadius: CGFloat</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="/images/BBD09B73-E90B-4943-8E2F-AA6CCAD492C3.png" alt="LM"></p>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
         </div>
       
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/12/使用-curl-命令分析请求的耗时情况/" rel="next" title="使用 curl 命令分析请求的耗时情况">
+                <i class="fa fa-chevron-left"></i> 使用 curl 命令分析请求的耗时情况
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/24/让Github项目支持CocoaPods/" itemprop="url">
-              
-                <span itemprop="name">让Github项目支持CocoaPods</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-24T20:51:56+08:00"
-              content="2016-05-24" >
-          05-24
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -286,6 +359,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/12/iOS自定义xib属性/"
+           data-title="iOS自定义xib属性" data-url="http://yoursite.com/2017/04/12/iOS自定义xib属性/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -305,8 +386,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/headImage.png"
@@ -383,6 +473,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective-C-IBDesignable-IBInspectable"><span class="nav-number">1.</span> <span class="nav-text">Objective-C IBDesignable/IBInspectable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-IBDesignable-IBInspectable"><span class="nav-number">2.</span> <span class="nav-text">Swift IBDesignable/IBInspectable</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -475,11 +576,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
