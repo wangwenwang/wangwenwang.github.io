@@ -75,5 +75,5 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:wangwenwang/wangwenwang.github.io.git
-  branch: master
+  branch: hexo
   message: "for hexo d"
