@@ -33,9 +33,7 @@
 	},{enableHighAccuracy: true})
 
 	//处理定位后的信息
-    function showLocation(r) {  
-        jingDu = r.coords.longitude;
-        weiDu = r.coords.latitude; 
+    function showLocation(r) {
         Address = r.addresses; 
         centerPointer = new BMap.Point(r.coords.longitude,r.coords.latitude);
         exchange(); 
